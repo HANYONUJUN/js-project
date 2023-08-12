@@ -6,11 +6,12 @@
 // function -> 하나의 함수 즉 여러 코드에서 중복으로 사용할 수 있는 조각같은 부분
 // const age = parseInt(prompt("How old are you?")); <-number로 받음
 //js와 html은 서로 연결되어 있음
-//
+// html에서 id에 값을 줘 js에서 그 id값을 가져와 내용을 변경할 수 있음
+// getElementsByTagName == anchor, section, button같은 것들을 의미
+// querySelector는 element를 css 방식으로 검색 가능 -> const title = document.querySelector(".hello h1");
 
+const title = document.querySelector(".hello h1");
 
-const title = document.getElementById("title");
-
-title.innerText= "Got you!";
+console.log(title);
 
 
