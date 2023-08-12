@@ -10,8 +10,15 @@
 // getElementsByTagName == anchor, section, button같은 것들을 의미
 // querySelector는 element를 css 방식으로 검색 가능 -> const title = document.querySelector(".hello h1");
 
-const title = document.querySelector(".hello h1");
 
-console.log(title);
+ const title = document.querySelector("div.hello:first-child h1");
 
+ function handleTitleClick() {
+     console.log("title was clicked!")
+     title.style.color = "blue";
+ }
+
+title.addEventListener("click", handleTitleClick);
+
+//event function을 통해 title을 click 했을 경우 event function에 있는 내용 or 효과들이 작동
 
