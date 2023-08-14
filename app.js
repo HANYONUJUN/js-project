@@ -11,14 +11,30 @@
 // querySelector는 element를 css 방식으로 검색 가능 -> const title = document.querySelector(".hello h1");
 
 
- const title = document.querySelector("div.hello:first-child h1");
+ const h1 = document.querySelector("div.hello:first-child h1");
 
  function handleTitleClick() {
-     console.log("title was clicked!")
-     title.style.color = "blue";
+
+    const currentColor = h1.style.color;
+    let newColor;
+    
+    if( currentColor === "blue"){
+        newColor = "tomato";
+    }else{
+        newColor = "blue";
+    }
+    h1.style.color = newColor;
  }
 
-title.addEventListener("click", handleTitleClick);
+h1.onclick = handleTitleClick;
+
+
+
+// window.addEventListener("resize", handleWindowResize);
+// window.addEventListener("copy", handleWindowCopy);
+// window.addEventListener("offline", handleWindowOffline);
+// window.addEventListener("online", handleWindowOnline);
+// window event -> 좀 더 강력하게 동작하는 event
 
 //event function을 통해 title을 click 했을 경우 event function에 있는 내용 or 효과들이 작동
 
